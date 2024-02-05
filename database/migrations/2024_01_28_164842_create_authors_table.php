@@ -11,22 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('words', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('text');
-            $table->string('language_code');                    
-            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');            
             $table->timestamps();
-
-            $table->unique(['language_code', 'text']);
-        });            
+        });                
     }
+    
+
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('words');
+        Schema::dropIfExists('authors');
     }
 };

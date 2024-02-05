@@ -1,8 +1,16 @@
+# Now
+
+- Dá um erro na importação.
+
 # Base de Dados
 
 ## Words
 
 - Na tokenização será que faz sentido ter palavras como "p", "k", ...
+
+## Imagens
+
+- Associar imagens às palavras.
 
 # Import 
 
@@ -26,3 +34,6 @@
     - Sempre em minúscula?
 
 
+## Language
+
+The supported languages are static in a array ($supportedLanguages).

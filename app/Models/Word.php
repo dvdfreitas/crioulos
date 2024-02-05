@@ -10,4 +10,14 @@ class Word extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function definitions()
+    {
+        return $this->hasMany(Definition::class);
+    }
+
+    public function translations()
+    {
+        return $this->hasMany(Translation::class);
+    }               
 }

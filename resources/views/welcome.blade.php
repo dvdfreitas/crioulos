@@ -1,3 +1,4 @@
 <x-guestLayout>
-    Languages: ISO 639-3
+    <x-hero/>
+    <livewire:stories.index/>
 </x-guestLayout>

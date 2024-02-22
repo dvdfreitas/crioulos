@@ -31,8 +31,11 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('password'),
         // ]);
 
-        DB::table('words')->delete();
-        Import::importWordsFromCSV('/home/dfreitas/www/crioulos/csv/words.csv');
+        // DB::table('words')->delete();
+        // Import::importWordsFromCSV('/home/dfreitas/www/crioulos/csv/words.csv');
         
+        $this->call([
+            StorySeeder::class,
+        ]);
     }
 }

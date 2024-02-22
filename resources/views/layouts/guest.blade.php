@@ -18,9 +18,12 @@
         @livewireStyles
     </head>
     <body>
+        
+        <x-navbar/>
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
-        </div>
+        </div>        
+        <x-footer/>
 
         @livewireScripts
     </body>

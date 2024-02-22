@@ -37,3 +37,5 @@
 ## Language
 
 The supported languages are static in a array ($supportedLanguages).
+
+- Languages: ISO 639-3

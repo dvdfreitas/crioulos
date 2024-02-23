@@ -2,7 +2,10 @@
 
 namespace App;
 
+use App\Models\Sentence;
+use App\Models\Word;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 
 class Import
 {    
@@ -87,4 +90,38 @@ class Import
         }
     }
 
+    public static function translationsFromCSV($filePath) {        
+        if (($handle = fopen($filePath, 'r')) !== false) {
+            
+            $header = fgetcsv($handle, 0, self::$separator);            
+ 
+            while (($row = fgetcsv($handle, 0, self::$separator)) !== false) {                    
+                Sentence::create([
+                    'text' => $row[0],
+                    'language_code' => $header[0],
+                ]);
+                Sentence::create([
+                    'text' => $row[1],
+                    'language_code' => $header[1],
+                ]);
+
+                self::breakSentence($row[0], $header[0]);
+                self::breakSentence($row[1], $header[1]);
+            }
+
+            fclose($handle);            
+        } else {
+            $csv_content['error'] = "Error opening the CSV file.";        
+        }
+    }    
+
+    public static function breakSentence($sentence, $language_code) {
+        $words = explode(' ', $sentence);
+        foreach ($words as $word) {
+            DB::table('words')->insertOrIgnore([
+                'text' => $word, 
+                'language_code' => $language_code
+            ]);
+        }
+    }
 }

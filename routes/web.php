@@ -1,6 +1,7 @@
 <?php
 
 use App\Import;
+use App\Models\Sentence;
 use App\Models\Word;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,12 @@ Route::get('/words', function () {
     $words = Word::paginate(100);
     return view('words.index', compact(['words']));    
 });
+
+Route::get('/sentences', function () {
+    $sentences = Sentence::all();
+    return view('sentences.index', compact(['sentences']));    
+});
+
 
 Route::get('/lexicon/create', function () {        
     return view('lexicon.create');    

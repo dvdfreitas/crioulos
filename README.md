@@ -8,6 +8,10 @@
 
 - Na tokenização será que faz sentido ter palavras como "p", "k", ...
 
+## Sentences
+
+- Foi ignorado o facto de ter ponto final
+
 ## Imagens
 
 - Associar imagens às palavras.

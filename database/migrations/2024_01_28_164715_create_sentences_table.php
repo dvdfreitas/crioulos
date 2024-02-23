@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sentences', function (Blueprint $table) {
-            $table->id();
+            $table->id();            
+            $table->string('text');
+            $table->string('language_code');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('set null');                                
             $table->timestamps();
         });
     }

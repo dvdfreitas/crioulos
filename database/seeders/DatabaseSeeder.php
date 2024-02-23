@@ -36,6 +36,9 @@ class DatabaseSeeder extends Seeder
         
         $this->call([
             StorySeeder::class,
+            TranslationSeeder::class,
         ]);
+
+        
     }
 }

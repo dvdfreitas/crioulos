@@ -1,0 +1,22 @@
+<x-guestLayout>
+    <x-container>
+        <x-grid>
+            @foreach ($people as $person)
+                <div>
+                    <a target="_blank" href="{{ $person->homepage }}">
+                        <img class="m-auto rounded-full my-2 h-36 w-36 object-cover" src="/images/people/{{ $person->image }}">
+                        <div class="flex justify-center space-x-2">
+                            <p class="text-xl font-semibold origin-center text-center">{{ $person->name }}</p> 
+                            <p class="p-0.5 border hover:shadow-lg">+</p>
+                        </div>
+                    </a>
+                    <div class="flex justify-center space-x-2 mt-2">
+                        <a target="_blank" href="https://www.linkedin.com/in/{{ $person->linkedin }}"><img src="/images/icons/linkedin.svg" class="h-6 inline-block"></a>
+                        <a target="_blank" href="https://www.facebook.com/{{ $person->facebook }}"><img src="/images/icons/facebook.svg" class="h-6 inline-block"></a>
+                        <a target="_blank" href="https://www.instagram.com/{{ $person->instagram }}"><img src="/images/icons/instagram.svg" class="h-6 inline-block"></a>
+                    </div>
+                </div>                
+            @endforeach
+        </x-grid>
+    </x-container>
+</x-guestLayout>

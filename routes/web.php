@@ -3,6 +3,7 @@
 use App\Http\Controllers\LanguageCodeController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\ReferenceController;
+use App\Import;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,4 +25,12 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+
+// Tests
+Route::get('/test', function() {
+    $import = new Import();
+    $file = $import->import('/home/dfreitas/www/crioulos/csv/pt-pov-small.csv');
+    dd($file);
 });

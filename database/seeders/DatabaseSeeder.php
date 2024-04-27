@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Import;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,6 +25,8 @@ class DatabaseSeeder extends Seeder
             LanguageCodeSeeder::class,
             ReferenceSeeder::class,
             PersonSeeder::class,
-        ]);
+        ]);        
+
+        
     }
 }

@@ -18,7 +18,8 @@ class LanguageCodeSeeder extends Seeder
         DB::table('language_codes')->insert([
             'id' => 1,
             'code' => 'por',
-            'name' => 'Português',            
+            'name' => 'Português',
+            'description' => 'O português é uma língua românica flexiva ocidental, pertencente ao grupo indo-europeu, originada do galego-português falado no Reino da Galiza e no norte de Portugal. Após a subsequente expansão para o sul durante a Reconquista, a língua começou a ser difundida nas terras conquistadas.',
         ]);
 
         DB::table('language_codes')->insert([

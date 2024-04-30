@@ -27,10 +27,3 @@ Route::middleware([
     })->name('dashboard');
 });
 
-
-// Tests
-Route::get('/test', function() {
-    $import = new Import();
-    $file = $import->import('/home/dfreitas/www/crioulos/csv/pt-pov-small.csv');
-    dd($file);
-});

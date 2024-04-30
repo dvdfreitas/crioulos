@@ -10,6 +10,9 @@
             <p>Existem poucos recursos.</p>
             <p>Esta página pretende criar uma comunidade que, recorrendo à Inteligência Artificial, dê um contributo para a criação de uma maior sinergia entre as duas línguas.</p>
         </x-paragraph>    
-    </x-container>
 
+        
+        <livewire:translator/>
+        
+    </x-container>    
 </x-guestLayout>

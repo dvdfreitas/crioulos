@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('translations', function (Blueprint $table) {
+        Schema::create('sentences', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Word::class, 'source_id');
-            $table->foreignIdFor(\App\Models\Word::class, 'target_id');            
+            $table->string('text');
+            $table->foreignIdFor(\App\Models\LanguageCode::class);
             $table->timestamps();
-
-            $table->unique(['source_id', 'target_id']);
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('translations');
+        Schema::dropIfExists('sentences');
     }
 };

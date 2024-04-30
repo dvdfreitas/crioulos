@@ -16,7 +16,7 @@ class SentenceSeeder extends Seeder
     {
         DB::table('sentences')->truncate();
         $import = new Import();
-        $import->importSentences('/home/dfreitas/www/crioulos/csv/frases-por.csv');        
-        $import->importSentences('/home/dfreitas/www/crioulos/csv/frases-pov.csv');        
+        $import->importSentences(env('CSV_FOLDER') . 'frases-por.csv');        
+        $import->importSentences(env('CSV_FOLDER') . 'frases-pov.csv');        
     }
 }

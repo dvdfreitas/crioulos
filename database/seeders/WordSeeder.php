@@ -16,6 +16,6 @@ class WordSeeder extends Seeder
     {        
         DB::table('words')->truncate();
         $import = new Import();
-        $import->importTranslations('/home/dfreitas/www/crioulos/csv/por-pov.csv');        
+        $import->importTranslations(env('CSV_FOLDER') . 'por-pov.csv');        
     }
 }

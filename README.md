@@ -1,3 +1,11 @@
+# Configurações
+
+É necessário criar no .env as seguintes variáveis:
+
+```bash
+CSV_FOLDER='caminho para a pasta onde estão os ficheiros CSV'
+```
+
 # Issues
 
 - HLD1.0: Melhorar este método para fazer paginação e para encontrar outras palavras traduzidas (pode ter mais de uma tradução). Era giro colocar as palavras destacadas.

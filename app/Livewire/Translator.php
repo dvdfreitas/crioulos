@@ -13,11 +13,12 @@ class Translator extends Component
     public $sourceLanguage;
     public $targetLanguage;
     public $text;
+    public $highlightedText;
     public $translations;
     public $sentences;
 
     public function render()
-    {        
+    {
         return view('livewire.translator');
     }
 
@@ -34,12 +35,12 @@ class Translator extends Component
             ->first();
 
         if ($word) {
-            $this->translations = Translation::where('source_id', $word->id)            
+            $this->translations = Translation::where('source_id', $word->id)
                 ->with('target')
                 ->get();
 
             if ($this->translations) {
-                
+
                 $wordToSearch = $this->translations->first()->target->text;
 
                 # HLD1.0                                
@@ -49,6 +50,25 @@ class Translator extends Component
                     })
                     ->limit(5)
                     ->get();
+
+                $this->highlightTranslatedWord();
+            }
+        }
+    }
+
+    public function highlightTranslatedWord()
+    {
+        if ($this->sentences && $wordToSearch = $this->translations->first()->target->text) {
+
+            foreach ($this->sentences as $sentence) {
+                
+                $highlightedSentence = preg_replace(
+                    "/\b(" . preg_quote($wordToSearch, '/') . ")\b/i",
+                    "<span class='text-amber-700'>$1</span>",
+                    $sentence->text
+                );
+
+                $sentence->text = $highlightedSentence;
             }
         }
     }

@@ -16,6 +16,30 @@ Route::get('/references', [ReferenceController::class, 'index'])->name('referenc
 
 Route::get('/people', [PersonController::class, 'index'])->name('people.index');
 
+Route::get('/history', function () {
+    return view('history.index');
+})->name('history.index');
+
+
+Route::get('/history/notion_origins', function () {
+    return view('history.notion_origins');
+})->name('history.notion_origins');
+
+Route::get('/history/types', function () {
+    return view('history.types');
+})->name('history.types');
+
+Route::get('/history/peoplem', function () {
+    return view('history.peoplem');
+})->name('history-peoplem');
+
+Route::get('/history/people/amilcar_cabral', function () {
+    return view('history.people.amilcar_cabral');
+})->name('history-people-amilcar');
+
+Route::get('/history/people/luis_romano', function () {
+    return view('history.people.luis_romano');
+})->name('history-people-luis');
 
 Route::middleware([
     'auth:sanctum',

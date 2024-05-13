@@ -1,3 +1,3 @@
-<div class="space-y-4 text-2xl text-justify font-thin my-8">
+<div class="space-y-4 text-xl text-justify font-thin">
     {{ $slot }}
 </div>

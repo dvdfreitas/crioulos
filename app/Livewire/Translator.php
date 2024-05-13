@@ -13,7 +13,6 @@ class Translator extends Component
     public $sourceLanguage;
     public $targetLanguage;
     public $text;
-    public $highlightedText;
     public $translations;
     public $sentences;
 
@@ -62,13 +61,13 @@ class Translator extends Component
 
             foreach ($this->sentences as $sentence) {
                 
-                $highlightedSentence = preg_replace(
+                $highlightedWordSentence = preg_replace(
                     "/\b(" . preg_quote($wordToSearch, '/') . ")\b/i",
                     "<span class='text-amber-700'>$1</span>",
                     $sentence->text
                 );
 
-                $sentence->text = $highlightedSentence;
+                $sentence->text = $highlightedWordSentence;
             }
         }
     }

@@ -9,7 +9,7 @@
                 <div class="mt-6 lg:mb-0 mb-6">
                     <!-- GitHub -->
                     <a href="https://github.com/dvdfreitas/crioulos">
-                        <button class="bg-white text-amber-700 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fa-brands fa-github fa-xl"></i></button>
+                        <button class="bg-white flex shadow-md font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><img class="w-6 inline-block" src="/images/icons/github.svg" alt=""></button>
                     </a>
                 </div>
             </div>

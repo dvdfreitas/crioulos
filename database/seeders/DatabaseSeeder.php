@@ -18,14 +18,13 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();        
 
         $this->call([
+            UserSeeder::class,            
             LanguageCodeSeeder::class,
             ReferenceSeeder::class,
             PersonSeeder::class,
             WordSeeder::class,
             SentenceSeeder::class,
             QuoteSeeder::class,
-        ]);        
-
-        
+        ]);                
     }
 }

@@ -25,5 +25,13 @@ class PersonSeeder extends Seeder
             'homepage' => 'https://ambulanceforhearts.pt/davidfreitas',
             'description' => 'Criador da plataforma e voluntário na ONGD "Na Rota dos Povos"'
         ]);
+
+        DB::table('people')->insert([
+            'name' => 'Rafael Vieira',
+            'email' => 'rafinhapt06@gmail.com',
+            'image' => 'rafael.jpg',
+            'instagram' => '_vieira_06',
+            'description' => 'Estudante da Escola Secundária de Gondomar"'
+        ]);
     }
 }

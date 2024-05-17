@@ -34,6 +34,11 @@ class QuoteSeeder extends Seeder
             [
                 'quote' => 'A língua portuguesa é uma das melhores coisas que os portugueses nos deixaram, porque a língua não é senão um instrumento par os homens se relacionarem uns com os outros, um meio para exprimirem as realidades da vida e do mundo',
                 'author' => 'Amílcar Cabral',
+            ],
+            // Crioulo e Português p136
+            [
+                'quote' => 'O crioulo - de certa forma espelha a nossa alma - nossa alma - não é? Porque há certos aspectos profundos da nossa maneira de ser - da nossa alma - que só com o crioulo vem à tona (...)',
+                'author' => 'Informante 29 (estudo de Amália Melo Lopes)',
             ]
         ];
 

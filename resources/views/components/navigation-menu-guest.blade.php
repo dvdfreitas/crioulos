@@ -1,4 +1,4 @@
-<nav class="flex fixed w-full z-20 top-0 start-0 shadow bg-white">
+<nav class="flex fixed w-full z-20 top-0 start-0 border-b shadow-sm bg-white">
     <div class="max-w-screen-xl w-full flex flex-wrap items-center justify-between mx-auto p-3">
         <a class="flex items-center gap-3" href="{{ route('welcome') }}">
             <svg class="h-10" alt="logo" viewBox="0 0 10240 10240">

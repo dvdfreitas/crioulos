@@ -3,7 +3,7 @@
         <div class="grid grid-cols-4 gap-8 m-10 content-center text-lg">
             <div class="col-span-3 flex flex-col justify-center">
                 <div class="text-justify space-y-5">
-                <a class="mb-5 text-3xl italic hover:underline hover:cursor-pointer" href="{{ route('history-peoplem') }}">Voltar atrás</a><a class="italic text-3xl">...</a>
+                <a class="mb-5 text-3xl italic hover:underline hover:cursor-pointer" href="{{ route('creole-history') }}">Voltar atrás</a><a class="italic text-3xl">...</a>
                     <a class="mb-2 font-bold text-5xl flex">Amílcar Cabral</a>
 
                     <a class="font-bold text-3xl flex">Biografia</a>

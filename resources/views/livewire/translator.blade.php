@@ -1,4 +1,4 @@
-<div class="my-10 bg-white p-4 shadow-md rounded-md">
+<x-card>
     <h1 class="text-2xl text-center font-bold my-2">Tradutor</h1>
     <div class="flex flex-col sm:flex-row items-center justify-center mb-2 gap-4">
         <div class="">
@@ -31,4 +31,4 @@
         </div>
     </div>
     @endif
-</div>
+</x-card>

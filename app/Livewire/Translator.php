@@ -45,7 +45,7 @@ class Translator extends Component
                 # HLD1.0                                
                 $this->sentences = Sentence::where('language_code_id', $this->targetLanguage)
                     ->where(function ($query) use ($wordToSearch) {
-                        $query->where("text", "regexp", "(^| )" . preg_quote($wordToSearch, '/') . ".*( |$)");
+                        $query->whereRaw("LOWER(text) REGEXP LOWER(CONCAT('[[:<:]]', ?, '[[:>:]]'))", [$wordToSearch]);
                     })
                     ->limit(5)
                     ->get();
@@ -63,7 +63,7 @@ class Translator extends Component
                 
                 $highlightedWordSentence = preg_replace(
                     "/\b(" . preg_quote($wordToSearch, '/') . ")\b/i",
-                    "<span class='text-amber-700'>$1</span>",
+                    "<span class='text-amber-700'>$0</span>",
                     $sentence->text
                 );
 

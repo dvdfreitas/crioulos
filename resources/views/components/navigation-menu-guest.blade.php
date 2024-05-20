@@ -132,7 +132,7 @@
                 </a>
             </x-button>
             <p class="my-4 text-xs text-center text-gray-400">
-                <span>Copyright © 2021</span>
+                <span>Copyright © 2024</span>
             </p>
         </div>
     </nav>

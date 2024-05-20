@@ -1,4 +1,4 @@
-<footer class="absolute w-full bg-white pt-8 pb-6">
+<footer class="absolute w-full bg-white border-t pt-8 pb-6">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
@@ -9,7 +9,7 @@
                 <div class="mt-6 lg:mb-0 mb-6">
                     <!-- GitHub -->
                     <a href="https://github.com/dvdfreitas/crioulos">
-                        <button class="bg-white text-amber-700 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><i class="fa-brands fa-github fa-xl"></i></button>
+                        <button class="bg-white flex shadow-md font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button"><img class="w-6 inline-block" src="/images/icons/github.svg" alt=""></button>
                     </a>
                 </div>
             </div>

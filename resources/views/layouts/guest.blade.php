@@ -17,9 +17,9 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="bg-gray-100 py-16">
+    <body class="flex flex-col h-screen bg-gray-100 pt-16">
         <x-navigation-menu-guest/>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="mb-auto font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>
         <x-footer/>
